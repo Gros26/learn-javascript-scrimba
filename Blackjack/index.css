@@ -1,0 +1,15 @@
+h1 {
+    color: goldenrod;
+}
+
+body {
+    color: white;
+    background-image: url("table.png");
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#message-el {
+    font-style: oblique;
+}

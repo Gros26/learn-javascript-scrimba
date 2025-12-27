@@ -1,21 +1,23 @@
-let firstCard = -1
-let secondCard = 0
+let firstCard = 11
+let secondCard = 14
 let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
+let message = ""
 
 console.log(sum)
 
 if (sum < 21) {
-    console.log("Do you want to draw a new card? 😬")
+    message = "Do you want to draw a new card? 😬"
 } else if (sum === 21) {
     hasBlackJack = true
-    console.log("You've got a blackjack! 🥳")
+    message = "You've got a blackjack! 🥳"
 } else {
     isAlive = false
-    console.log("You're out of the game! 😭")
+    message = "You're out of the game! 😭"
 }
 
+console.log(message)
 console.log(hasBlackJack)
 console.log(isAlive)
 
