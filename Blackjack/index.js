@@ -31,6 +31,10 @@ function startGame() {
     console.log(isAlive)
 }
 
+function newCard() {
+    console.log("Drawing a new card from the deck")
+}
+
 
 
 
