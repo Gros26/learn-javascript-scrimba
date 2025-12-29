@@ -1,4 +1,4 @@
-let firstCard = 10
+let firstCard = 3
 let secondCard = 10
 let sum = firstCard + secondCard
 let hasBlackJack = false
@@ -13,7 +13,7 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
 function startGame() {
-    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard 
     sumEl.textContent = "Sum: " + sum 
     
     if (sum < 21) {
@@ -33,6 +33,10 @@ function startGame() {
 
 function newCard() {
     console.log("Drawing a new card from the deck")
+    let thirdCard = 5
+    sum += thirdCard
+    startGame()
+
 }
 
 
