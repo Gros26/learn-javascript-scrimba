@@ -13,6 +13,10 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
 function startGame() {
+    renderGame()
+}
+
+function renderGame() {
     cardsEl.textContent = "Cards: " + firstCard + " " + secondCard 
     sumEl.textContent = "Sum: " + sum 
     
@@ -35,7 +39,7 @@ function newCard() {
     console.log("Drawing a new card from the deck")
     let thirdCard = 5
     sum += thirdCard
-    startGame()
+    renderGame()
 
 }
 
