@@ -17,7 +17,13 @@ function startGame() {
 }
 
 function renderGame() {
-    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1]
+
+    cardsEl.textContent = "Cards: "
+
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
+    }
+
     sumEl.textContent = "Sum: " + sum 
     
     if (sum < 21) {
@@ -31,20 +37,16 @@ function renderGame() {
     }
 
     messageEl.textContent = message
-    console.log(hasBlackJack)
-    console.log(isAlive)
 }
 
 function newCard() {
-    console.log("Drawing a new card from the deck")
+
     let thirdCard = 5
     cards.push(thirdCard)
     sum += thirdCard
     renderGame()
 
 }
-
-
 
 
 
