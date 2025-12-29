@@ -1,18 +1,26 @@
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
-
 
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 // let sumEl = document.querySelector("#sum-el") es equivalente, querySelector es mas flexible
 let cardsEl = document.querySelector("#cards-el")
 
+console.log(cards)
+
 function startGame() {
+    let isAlive = true
+    let aux
+
+    for (let i = 0; i < 2; i++) {
+        aux = getRandomCard()
+        sum += aux
+        cards.push(aux)
+    }
+    
     renderGame()
 }
 
