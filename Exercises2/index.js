@@ -15,6 +15,22 @@ logData()
 
 let largestCountries = ['China', 'India', 'United States', 'Indionesia', 'Pakistan']
 
-for (let i = 0; i < largestCountries.length; i++) {
-    console.log(largestCountries[i])
+function printArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i])
+    }
 }
+
+printArray(largestCountries)
+
+
+////////
+
+let largeCountries = ['Tuvalu', 'India', 'United States', 'Indionesia', 'Monaco']
+
+largeCountries.shift()
+largeCountries.unshift('China')
+largeCountries.pop()
+largeCountries.push('Pakistan')
+
+printArray(largeCountries)
