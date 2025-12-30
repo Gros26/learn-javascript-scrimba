@@ -34,3 +34,18 @@ largeCountries.pop()
 largeCountries.push('Pakistan')
 
 printArray(largeCountries)
+
+
+/////
+
+let hands = ['rock', 'paper', 'scissor']
+
+function returnRandomHand() {
+    let random = Math.floor(Math.random() * 3)
+    console.log(random)
+    return hands[random]
+}
+
+console.log(returnRandomHand())
+console.log(returnRandomHand())
+console.log(returnRandomHand())
