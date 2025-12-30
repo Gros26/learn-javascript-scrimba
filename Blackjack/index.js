@@ -12,7 +12,7 @@ let cardsEl = document.querySelector("#cards-el")
 console.log(cards)
 
 function startGame() {
-    let isAlive = true
+    isAlive = true
     let aux
 
     for (let i = 0; i < 2; i++) {
@@ -48,11 +48,16 @@ function renderGame() {
 }
 
 function newCard() {
-
-    let card = getRandomCard()
-    cards.push(card)
-    sum += card
-    renderGame()
+    console.log(isAlive)
+    console.log(hasBlackJack)
+    if (isAlive && !hasBlackJack) {
+        let card = getRandomCard()
+        cards.push(card)
+        sum += card
+        renderGame()
+    } else {
+        console.log("You cannot draw a new card")
+    }
 
 }
 
