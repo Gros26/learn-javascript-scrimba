@@ -6,9 +6,15 @@ let person = {
 }
 
 function logData() {
-    console.log(person.name + " is " + person.age + " yeras old and lives in " + person.country)
+    console.log(person.name + " is " + person.age + " years old and lives in " + person.country)
 }
 
+logData()
 
 ///////////
 
+let largestCountries = ['China', 'India', 'United States', 'Indionesia', 'Pakistan']
+
+for (let i = 0; i < largestCountries.length; i++) {
+    console.log(largestCountries[i])
+}
