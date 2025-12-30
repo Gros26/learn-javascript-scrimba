@@ -1,3 +1,8 @@
+let player = {
+    name: "Gros",
+    chips: 143
+}
+
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -8,8 +13,10 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 // let sumEl = document.querySelector("#sum-el") es equivalente, querySelector es mas flexible
 let cardsEl = document.querySelector("#cards-el")
+let playerEl = document.getElementById("player-el")
 
-console.log(cards)
+playerEl.textContent = player.name + ": $" + player.chips
+
 
 function startGame() {
     isAlive = true
@@ -23,6 +30,7 @@ function startGame() {
     
     renderGame()
 }
+
 
 function renderGame() {
 
@@ -47,6 +55,7 @@ function renderGame() {
     messageEl.textContent = message
 }
 
+
 function newCard() {
     console.log(isAlive)
     console.log(hasBlackJack)
@@ -60,6 +69,7 @@ function newCard() {
     }
 
 }
+
 
 function getRandomCard() {
     let randomCard = Math.floor(Math.random() * 13 ) + 1
