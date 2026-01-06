@@ -7,11 +7,15 @@ const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
-    printArray(myLeads)
+    renderLeads(myLeads)
 })
 
 
-function printArray(array) {
-    ulEl.textContent = ""
-    array.forEach(e => ulEl.innerHTML += "<li>" + e + "</li>")
+
+function renderLeads(array) {
+    let listItems = ""
+    array.forEach(e => listItems += "<li>" + e + "</li>")
+    console.log(listItems)
+    ulEl.innerHTML = listItems
 }
+
