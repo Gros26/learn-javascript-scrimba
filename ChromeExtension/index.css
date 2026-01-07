@@ -35,3 +35,11 @@ li {
 li a { /* Esto significa que solo los anchor tag que estan dentro de li */
     color: #5f9341;
 }
+
+#delete-btn {
+    background-color: white;
+    color: #5f9341;
+    border-color: #5f9341;
+    border: 1px solid;
+
+}
