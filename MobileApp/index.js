@@ -1,7 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
 import { getDatabase,
          ref,
-         push } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
+         push,
+         onValue } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
 import { firebaseConfig } from "./config.js";
 
 
@@ -11,12 +12,11 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-const refDB = ref(database, "leadsTracker")
+const referenceInDB = ref(database, "leads")
 
 
 inputBtn.addEventListener("click", function() {
-    push(refDB, inputEl.value)
-    console.log(inputEl.value)
+    push(referenceInDB, inputEl.value)
     inputEl.value = ""
 })
 
@@ -24,6 +24,11 @@ inputBtn.addEventListener("click", function() {
 deleteBtn.addEventListener("dblclick", function() {
 })
 
+onValue(referenceInDB, function(snapshot) {
+    const snapshotValues = snapshot.val()
+    const leads = Object.values(snapshotValues)
+    renderLeads(leads)
+})
 
 function renderLeads(array) {
     let listItems = ""
